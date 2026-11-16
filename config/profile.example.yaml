@@ -1,0 +1,96 @@
+# Your answers for application forms (used by the browser extension) and the cover-letter header.
+# Copy this file to config/profile.yaml (which is gitignored) and fill it in:
+#     cp config/profile.example.yaml config/profile.yaml
+# Anything left empty is never filled in: the extension leaves that field for you.
+# After editing, restart the bot (Ctrl-C and rerun `python -m jobalerts bot`, or
+# `launchctl kickstart -k gui/$(id -u)/com.jobalerts.resumebot` if you use the launchd plist).
+
+name:
+  first: ""
+  last: ""
+  preferred: ""
+email: ""
+phone: ""                         # e.g. "+1 555-555-5555"
+phone_type: "Mobile"              # Workday "Phone Device Type"
+links:
+  linkedin: ""                    # https://www.linkedin.com/in/...
+  github: ""                      # https://github.com/...
+  portfolio: ""
+location:
+  address1: ""
+  address2: ""
+  city: ""
+  state: ""                       # full name, e.g. California
+  country: United States
+  zip: ""
+
+education:
+  school: ""                      # e.g. University of Somewhere
+  degree: ""                      # e.g. Master of Science
+  major: ""                       # e.g. Computer Science
+  graduation: ""                  # e.g. "May 2027"
+  graduation_month: ""            # "5"
+  graduation_year: ""             # "2027"
+  graduation_date: ""             # MM/DD/YYYY, for full-date questions (Workday Month / Day / Year)
+  school_location: ""             # "City, ST"
+  start_month: ""
+  start_year: ""
+  gpa: ""
+  enrolled: ""                    # "Yes" / "No": "Are you currently enrolled in a Master's degree program?"
+
+# "Who is your current or previous employer?" / "…job title?"
+current_job:
+  employer: ""
+  title: ""
+
+# Workday "My Experience": one block per job, newest first. Fill adds blocks as needed and only fills
+# empty fields (it never overwrites what Workday parsed from your resume). "to" empty = "I currently work here".
+work_history:
+  - title: ""
+    company: ""
+    location: ""                  # "City, State"
+    from: ""                      # "MM/YYYY"
+    to: ""
+    description: |-
+      • One resume bullet per line.
+
+education_history:
+  - school: ""
+    degree: ""
+    field: ""
+    gpa: ""
+    from: ""                      # "MM/YYYY"
+    to: ""
+
+# PDF the extension attaches when a job has no tailored resume yet (📄 Create resume makes one per job).
+default_resume: ""                # e.g. ~/Documents/My_Resume.pdf
+
+# ── Answer these yourself. Empty = the extension skips the question so you answer it on the form. ─────────
+# Use "Yes" / "No" for the yes/no ones.
+work_authorization:
+  authorized_us: ""                # "Are you legally authorized to work in the United States?"
+  needs_sponsorship: ""            # "Will you now or in the future require visa sponsorship?"
+  status: ""                       # e.g. "U.S. Citizen", "F-1 (OPT)", "F-1 (CPT)", "H-1B"
+willing_to_relocate: ""            # Yes / No
+earliest_start: ""                 # e.g. "May 2027"
+how_did_you_hear: ""               # e.g. "Company website"
+
+# Compliance questions (Salesforce and similar forms). The final "I acknowledge that I answered truthfully"
+# attestation is never filled: tick it yourself.
+screening:
+  government_employee: ""          # "In the last 5 years, have you been an employee of a U.S. federal, state, or local government … ?"
+  post_government_attest: ""       # "I attest/confirm that I have no post-government employment restrictions …"
+  debarred: ""                     # "… debarred, suspended, proposed for debarment or declared ineligible …?"
+  sanctioned_country: ""           # "Are you a citizen, national or permanent resident of Iran, Cuba, North Korea or Syria?"
+  future_communications: ""        # "… receive communications about future openings"
+  unrestricted_work: ""            # "Do you have the unrestricted right to work …?"
+  postgrad_after_internship: ""    # "Do you intend to enroll in a postgraduate degree following this internship?"
+  preferred_locations: []          # "Preferred Location 1/2/3" (must match the form's options)
+
+# Voluntary self-identification. Empty = left for you; or e.g. "Decline to self-identify".
+eeo:
+  gender: ""
+  race: ""
+  hispanic_latino: ""
+  veteran: ""
+  disability: ""

@@ -1,0 +1,1028 @@
+[
+ {
+  "company": "Meta",
+  "tier": "big_tech",
+  "ats": "custom_spa",
+  "slug": null,
+  "jobs": null,
+  "status": "BLOCKED",
+  "note": "metacareers.com GraphQL SPA; HTTP 400 to plain GET; no ld+json. Cover via GitHub feed (9 active)."
+ },
+ {
+  "company": "Microsoft",
+  "tier": "big_tech",
+  "ats": "eightfold",
+  "slug": "apply.careers.microsoft.com",
+  "jobs": null,
+  "status": "LIKELY",
+  "note": "Career site serves Eightfold assets (static.vscdn.net/eightfold-font-base.css). gcsservices API unreachable from test host."
+ },
+ {
+  "company": "Google",
+  "tier": "big_tech",
+  "ats": "custom_spa",
+  "slug": null,
+  "jobs": null,
+  "status": "BLOCKED",
+  "note": "1.26MB JS-rendered page, zero Schema.org JobPosting. careers.google.com/api/v3 returns 404. Cover via feed (5 active)."
+ },
+ {
+  "company": "Apple",
+  "tier": "big_tech",
+  "ats": "custom_api",
+  "slug": null,
+  "jobs": null,
+  "status": "BLOCKED",
+  "note": "jobs.apple.com/api/v1/search returns HTTP 401 (auth required). Cover via feed (12 active)."
+ },
+ {
+  "company": "Amazon",
+  "tier": "big_tech",
+  "ats": "custom_json",
+  "slug": "https://www.amazon.jobs/en/search.json",
+  "jobs": 21,
+  "status": "VERIFIED",
+  "note": "Public JSON search endpoint; robots.txt only disallows /internal."
+ },
+ {
+  "company": "NVIDIA",
+  "tier": "big_tech",
+  "ats": "workday",
+  "slug": "nvidia/wd5/NVIDIAExternalCareerSite",
+  "jobs": 954,
+  "status": "VERIFIED",
+  "note": "CXS POST API. robots.txt explicitly Allows /NVIDIAExternalCareerSite/."
+ },
+ {
+  "company": "ByteDance",
+  "tier": "big_tech",
+  "ats": "custom_spa",
+  "slug": null,
+  "jobs": null,
+  "status": "BLOCKED",
+  "note": "jobs.bytedance.com serves unrelated page. Feed covers 90 active."
+ },
+ {
+  "company": "TikTok",
+  "tier": "big_tech",
+  "ats": "custom_api",
+  "slug": null,
+  "jobs": null,
+  "status": "BLOCKED",
+  "note": "lifeattiktok.com API returns HTTP 405. Feed covers 159 active."
+ },
+ {
+  "company": "Tesla",
+  "tier": "big_tech",
+  "ats": "custom_akamai",
+  "slug": null,
+  "jobs": null,
+  "status": "DO_NOT_SCRAPE",
+  "note": "Akamai returns 403 on every request incl. robots.txt. Feed covers 55 active."
+ },
+ {
+  "company": "Rippling",
+  "tier": "big_tech",
+  "ats": "rippling",
+  "slug": "rippling",
+  "jobs": 748,
+  "status": "VERIFIED",
+  "note": "api.rippling.com/platform/api/ats/v1/board/rippling/jobs"
+ },
+ {
+  "company": "Salesforce",
+  "tier": "big_tech",
+  "ats": "workday",
+  "slug": "salesforce/wd12/External_Career_Site",
+  "jobs": 771,
+  "status": "VERIFIED",
+  "note": "Workday CXS confirmed working."
+ },
+ {
+  "company": "Intuit",
+  "tier": "big_tech",
+  "ats": "talentbrew",
+  "slug": "jobs.intuit.com",
+  "jobs": null,
+  "status": "VERIFIED",
+  "note": "search-jobs/results returns JSON envelope w/ embedded HTML."
+ },
+ {
+  "company": "Jane Street",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "janestreet",
+  "jobs": 233,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Hudson River Trading",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "hrttalentcommunity",
+  "jobs": 3,
+  "status": "PARTIAL",
+  "note": "Board only holds 'Campus Talent Community' entries; real roles live on hudsonrivertrading.com. Needs custom connector."
+ },
+ {
+  "company": "Optiver",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "optiverus",
+  "jobs": 178,
+  "status": "VERIFIED",
+  "note": "US board; other regions separate."
+ },
+ {
+  "company": "Anthropic",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "anthropic",
+  "jobs": 494,
+  "status": "VERIFIED",
+  "note": "updated_at present on 496/496 jobs."
+ },
+ {
+  "company": "OpenAI",
+  "tier": "tier1",
+  "ats": "ashby",
+  "slug": "openai",
+  "jobs": 741,
+  "status": "VERIFIED",
+  "note": "Public posting API enabled."
+ },
+ {
+  "company": "xAI",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "xai",
+  "jobs": 260,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Perplexity AI",
+  "tier": "tier1",
+  "ats": "ashby",
+  "slug": "perplexity",
+  "jobs": 100,
+  "status": "VERIFIED",
+  "note": "Slug is 'perplexity' not 'perplexityai'."
+ },
+ {
+  "company": "Cognition AI",
+  "tier": "tier1",
+  "ats": "ashby",
+  "slug": "cognition",
+  "jobs": 83,
+  "status": "VERIFIED",
+  "note": "cognition.ai redirects to cognition.com."
+ },
+ {
+  "company": "Scale AI",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "scaleai",
+  "jobs": 208,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Stripe",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "stripe",
+  "jobs": 569,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Palantir",
+  "tier": "tier1",
+  "ats": "lever",
+  "slug": "palantir",
+  "jobs": 308,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Databricks",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "databricks",
+  "jobs": 810,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Anduril",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "andurilindustries",
+  "jobs": 2237,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Waymo",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "waymo",
+  "jobs": 368,
+  "status": "VERIFIED",
+  "note": "careers.withwaymo.com fronts it."
+ },
+ {
+  "company": "SpaceX",
+  "tier": "tier1",
+  "ats": "greenhouse",
+  "slug": "spacex",
+  "jobs": 2170,
+  "status": "VERIFIED",
+  "note": "content=true payload is 24MB - never fetch wholesale."
+ },
+ {
+  "company": "Airbnb",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "airbnb",
+  "jobs": 191,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Figma",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "figma",
+  "jobs": 161,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Discord",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "discord",
+  "jobs": 53,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Roblox",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "roblox",
+  "jobs": 229,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Netflix",
+  "tier": "tier2",
+  "ats": "eightfold",
+  "slug": "netflix",
+  "jobs": 508,
+  "status": "VERIFIED",
+  "note": "explore.jobs.netflix.net; Eightfold apply/v2/jobs API."
+ },
+ {
+  "company": "Lyft",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "lyft",
+  "jobs": 161,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Reddit",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "reddit",
+  "jobs": 148,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Pinterest",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "pinterest",
+  "jobs": 220,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Dropbox",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "dropbox",
+  "jobs": 43,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Snowflake",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "snowflake",
+  "jobs": 389,
+  "status": "VERIFIED",
+  "note": "careers.snowflake.com uses Phenom for search UI; Ashby holds the data."
+ },
+ {
+  "company": "Datadog",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "datadog",
+  "jobs": 442,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Cloudflare",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "cloudflare",
+  "jobs": 306,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "MongoDB",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "mongodb",
+  "jobs": 406,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Confluent",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "confluent",
+  "jobs": 30,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Elastic",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "elastic",
+  "jobs": 249,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Sentry",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "sentry",
+  "jobs": 38,
+  "status": "VERIFIED",
+  "note": "Also a 3-job Rippling board; Ashby is authoritative."
+ },
+ {
+  "company": "Vercel",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "vercel",
+  "jobs": 84,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Robinhood",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "robinhood",
+  "jobs": 126,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Brex",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "brex",
+  "jobs": 294,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Ramp",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "ramp",
+  "jobs": 136,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Chime",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "chime",
+  "jobs": 58,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Affirm",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "affirm",
+  "jobs": 204,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Plaid",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "plaid",
+  "jobs": 107,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Kraken",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "kraken.com",
+  "jobs": 90,
+  "status": "VERIFIED",
+  "note": "Board slug is literally 'kraken.com'."
+ },
+ {
+  "company": "Mistral",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "mistral.ai",
+  "jobs": 164,
+  "status": "VERIFIED",
+  "note": "Board slug is literally 'mistral.ai'."
+ },
+ {
+  "company": "Cohere",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "cohere",
+  "jobs": 151,
+  "status": "VERIFIED",
+  "note": "Do NOT use greenhouse/coherehealth - different company."
+ },
+ {
+  "company": "ElevenLabs",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "elevenlabs",
+  "jobs": 255,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Runway ML",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "runway",
+  "jobs": 4,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Modal Labs",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "modal",
+  "jobs": 31,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Together AI",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "togetherai",
+  "jobs": 64,
+  "status": "VERIFIED",
+  "note": "Also a 22-job SmartRecruiters board; Greenhouse is richer."
+ },
+ {
+  "company": "Harvey",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "harvey",
+  "jobs": 369,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Cursor",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "cursor",
+  "jobs": 115,
+  "status": "VERIFIED",
+  "note": "Legal entity Anysphere; board slug is 'cursor'."
+ },
+ {
+  "company": "Replit",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "replit",
+  "jobs": 74,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Wiz",
+  "tier": "tier2",
+  "ats": "greenhouse",
+  "slug": "wizinc",
+  "jobs": 120,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Snyk",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "snyk",
+  "jobs": 0,
+  "status": "NO_API",
+  "note": "Ashby board exists but posting API returns jobs:[] (any case). Not in feed either -> GAP."
+ },
+ {
+  "company": "1Password",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "1password",
+  "jobs": 64,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Vanta",
+  "tier": "tier2",
+  "ats": "ashby",
+  "slug": "vanta",
+  "jobs": 97,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Zoox",
+  "tier": "tier2",
+  "ats": "lever",
+  "slug": "zoox",
+  "jobs": 237,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Shield AI",
+  "tier": "tier2",
+  "ats": "lever",
+  "slug": "shieldai",
+  "jobs": 431,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Cisco",
+  "tier": "tier2",
+  "ats": "phenom",
+  "slug": "careers.cisco.com",
+  "jobs": null,
+  "status": "UNCERTAIN",
+  "note": "Phenom People platform. Feed has 0 active -> GAP."
+ },
+ {
+  "company": "IBM",
+  "tier": "tier2",
+  "ats": "custom_spa",
+  "slug": null,
+  "jobs": null,
+  "status": "UNCERTAIN",
+  "note": "Next.js SPA, no public API found. Feed has 0 active -> GAP."
+ },
+ {
+  "company": "PocketFM",
+  "tier": "tier2",
+  "ats": "lever",
+  "slug": "pocketfm",
+  "jobs": 1,
+  "status": "VERIFIED",
+  "note": "Very low volume."
+ },
+ {
+  "company": "Duolingo",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "duolingo",
+  "jobs": 67,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Instacart",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "instacart",
+  "jobs": 118,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Samsara",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "samsara",
+  "jobs": 263,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Verkada",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "verkada",
+  "jobs": 280,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Okta",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "okta",
+  "jobs": 334,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "PagerDuty",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "pagerduty",
+  "jobs": 29,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "HubSpot",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "hubspot",
+  "jobs": 0,
+  "status": "NO_API",
+  "note": "Greenhouse board returns 0 jobs. Feed has 0 active -> GAP."
+ },
+ {
+  "company": "Asana",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "asana",
+  "jobs": 126,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Airtable",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "airtable",
+  "jobs": 16,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Box",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "boxinc",
+  "jobs": 126,
+  "status": "VERIFIED",
+  "note": "Slug is 'boxinc'."
+ },
+ {
+  "company": "Twilio",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "twilio",
+  "jobs": 146,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "GitLab",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "gitlab",
+  "jobs": 206,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Checkr",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "checkr",
+  "jobs": 42,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Gusto",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "gusto",
+  "jobs": 93,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Toast",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "toast",
+  "jobs": 323,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Peloton",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "peloton",
+  "jobs": 52,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Doximity",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "doximity",
+  "jobs": 10,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Lattice",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "lattice",
+  "jobs": 9,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Amplitude",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "amplitude",
+  "jobs": 34,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Mixpanel",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "mixpanel",
+  "jobs": 92,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "SendBird",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "sendbird",
+  "jobs": 11,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Fivetran",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "fivetran",
+  "jobs": 243,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Temporal",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "temporaltechnologies",
+  "jobs": 53,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Descript",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "descript",
+  "jobs": 7,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Flatiron Health",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "flatironhealth",
+  "jobs": 33,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "LaunchDarkly",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "launchdarkly",
+  "jobs": 50,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Hightouch",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "hightouch",
+  "jobs": 72,
+  "status": "VERIFIED",
+  "note": "Also 1-job Ashby board; Greenhouse authoritative."
+ },
+ {
+  "company": "Mercury",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "mercury",
+  "jobs": 56,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Pendo",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "pendo",
+  "jobs": 40,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Faire",
+  "tier": "tier3",
+  "ats": "greenhouse",
+  "slug": "faire",
+  "jobs": 63,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Airbyte",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "airbyte",
+  "jobs": 10,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Notion",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "notion",
+  "jobs": 128,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Loom",
+  "tier": "tier3",
+  "ats": "ACQUIRED",
+  "slug": null,
+  "jobs": null,
+  "status": "ACQUIRED",
+  "note": "loom.com/careers 301s to atlassian.com/company/careers. Track via Atlassian or drop."
+ },
+ {
+  "company": "Linear",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "Linear",
+  "jobs": 32,
+  "status": "VERIFIED",
+  "note": "Ashby slugs are case-insensitive."
+ },
+ {
+  "company": "Benchling",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "benchling",
+  "jobs": 50,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Hinge Health",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "hinge-health",
+  "jobs": 71,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Alchemy",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "alchemy",
+  "jobs": 17,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "PostHog",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "posthog",
+  "jobs": 12,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Deel",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "Deel",
+  "jobs": 0,
+  "status": "NO_API",
+  "note": "Board exists (hostedJobsPageSlug 'Deel') but API returns jobs:[]. Custom page at deel.com/careers/position. GAP."
+ },
+ {
+  "company": "Watershed",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "watershed",
+  "jobs": 33,
+  "status": "VERIFIED",
+  "note": "Do NOT use greenhouse/watershed - different company (bioinformatics)."
+ },
+ {
+  "company": "Neon",
+  "tier": "tier3",
+  "ats": "ACQUIRED",
+  "slug": null,
+  "jobs": null,
+  "status": "ACQUIRED",
+  "note": "neon.com/careers 301s to databricks.com. lever/neon + ashby/neon are OTHER companies."
+ },
+ {
+  "company": "Supabase",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "supabase",
+  "jobs": 56,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Bolt",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "bolt",
+  "jobs": 0,
+  "status": "NO_API",
+  "note": "Board exists but API returns jobs:[]. GAP."
+ },
+ {
+  "company": "Sardine",
+  "tier": "tier3",
+  "ats": "ashby",
+  "slug": "sardine",
+  "jobs": 35,
+  "status": "VERIFIED",
+  "note": ""
+ },
+ {
+  "company": "Superhuman",
+  "tier": "tier3",
+  "ats": "ACQUIRED",
+  "slug": "superhuman",
+  "jobs": 0,
+  "status": "ACQUIRED",
+  "note": "superhuman.com/company/careers embeds greenhouse slug 'grammarly' (404 on API); Ashby 'superhuman' returns 0. Acquired by Grammarly."
+ }
+]

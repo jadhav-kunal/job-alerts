@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Job Alerts Autofill</title>
+  <style>
+    body { font: 14px system-ui, sans-serif; margin: 24px; max-width: 560px; color: #111; }
+    label { display: block; margin: 14px 0 4px; font-weight: 600; }
+    input { width: 100%; padding: 6px 8px; font: inherit; box-sizing: border-box; }
+    button { margin-top: 16px; padding: 6px 14px; font: inherit; }
+    code { background: #f2f2f2; padding: 1px 4px; border-radius: 3px; }
+    #out { margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h2>Job Alerts Autofill</h2>
+  <p>Paste the token from <code>~/job-alerts/data/helper_token</code>. In a terminal:
+     <code>cat ~/job-alerts/data/helper_token | pbcopy</code></p>
+  <label for="token">Helper token</label>
+  <input id="token" type="password" autocomplete="off">
+  <label for="port">Helper port</label>
+  <input id="port" type="number" value="8765">
+  <button id="save">Save and test</button>
+  <div id="out"></div>
+  <script src="options.js"></script>
+</body>
+</html>

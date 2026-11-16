@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace YOUR_USERNAME first: sed -i '' "s/YOUR_USERNAME/$USER/g" deploy/*.plist
+     macOS: run the resume bot at login and restart it if it dies. It must run on the host (not Docker):
+     it uses your `claude` login, ~/.claude/skills and MacTeX.
+     cp deploy/com.jobalerts.resumebot.plist ~/Library/LaunchAgents/
+     launchctl load ~/Library/LaunchAgents/com.jobalerts.resumebot.plist
+     Logs: data/resumebot.log -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.jobalerts.resumebot</string>
+  <key>WorkingDirectory</key><string>/Users/YOUR_USERNAME/job-alerts</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/YOUR_USERNAME/job-alerts/.venv/bin/python</string>
+    <string>-m</string><string>jobalerts</string><string>bot</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key><string>/Users/YOUR_USERNAME/.local/bin:/Library/TeX/texbin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>/Users/YOUR_USERNAME/job-alerts/data/resumebot.log</string>
+  <key>StandardErrorPath</key><string>/Users/YOUR_USERNAME/job-alerts/data/resumebot.log</string>
+</dict>
+</plist>

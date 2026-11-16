@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace YOUR_USERNAME first: sed -i '' "s/YOUR_USERNAME/$USER/g" deploy/*.plist
+     macOS: run the daemon at login and restart it if it dies.
+     cp deploy/com.jobalerts.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.jobalerts.plist
+     Note: a sleeping laptop polls nothing — a $5 VPS (docker compose up -d) is the reliable option. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.jobalerts</string>
+  <key>WorkingDirectory</key><string>/Users/YOUR_USERNAME/job-alerts</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/YOUR_USERNAME/job-alerts/.venv/bin/python</string>
+    <string>-m</string><string>jobalerts</string><string>run</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>/Users/YOUR_USERNAME/job-alerts/data/jobalerts.log</string>
+  <key>StandardErrorPath</key><string>/Users/YOUR_USERNAME/job-alerts/data/jobalerts.log</string>
+</dict>
+</plist>

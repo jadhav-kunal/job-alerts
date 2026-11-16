@@ -1,0 +1,102 @@
+# What you want to hear about. Everything here is data, not code — edit and restart.
+
+user_agent: "job-alerts/1.0 (personal job monitor)"   # polite: add "; contact you@example.com"
+database: data/jobs.db
+
+roles:
+  # intern = internships / co-ops; new_grad = new grad, entry-level, "Engineer I", university roles
+  levels: [intern, new_grad]
+  # software, ai_ml (ML/AI engineering), research (research scientist/engineer), data, quant (quant dev/research)
+  categories: [software, ai_ml, research, data, quant]
+  # true = also alert on mid-level titles with no seniority word ("Software Engineer", "Research Engineer").
+  # Very noisy at big AI labs; leave false unless you want every unlevelled role.
+  accept_unleveled: false
+  exclude_title_keywords: []        # e.g. ["sales engineer", "clearance"]
+  exclude_companies: []             # company ids or names, lowercase
+
+# Internship seasons. Empty list = any season. New-grad roles rarely have a season and always pass.
+seasons: [Spring 2027, Summer 2027, Fall 2027, Winter 2027]
+
+locations:
+  # us, remote_us, remote (no country given), unknown (source gave no parseable location), non_us
+  allow: [us, remote_us, remote, unknown]
+
+# Rules that read the description (ported from jobhunter). A dropped job is kept in the DB with the reason.
+filters:
+  max_years_required: 2             # new-grad / entry roles asking for more years than this…; null = off. Interns skip it.
+  years_action: flag                # …get a "⚠ asks for 3+ years" heads-up (flag), or are dropped (drop). The parser
+                                    # reads "0-2 yrs (Associate) / 3-5 yrs (Mid)" postings as 5, so flag is safer.
+  employment_exclude: [contract, hourly]   # "C2C", "W2 only", "6-month contract", "$55/hr"; [] = keep them
+  contract_to_hire: keep            # or exclude
+  hourly_internships: keep          # interns are usually paid hourly; exclude to drop them too
+
+eligibility:
+  citizenship_filter: true          # drop postings that require US citizenship / security clearance
+  drop_no_sponsorship: false        # true = also drop "no visa sponsorship" postings (otherwise just tagged)
+  # Defense / government contractors: tag as "likely citizenship" even without a description
+  likely_citizenship_companies: [anduril, spacex, shield-ai, palantir, scale-ai]
+
+sources:
+  # SimplifyJobs GitHub lists (Big Tech + ~700 more companies), plus vanshb03's lists in the same format
+  simplify_feeds: [internships, new-grad, vansh-internships, vansh-new-grad]
+  markdown_lists: [speedyapply-internships, speedyapply-new-grad]   # speedyapply/2027-SWE-College-Jobs tables
+  dover: true                       # Dover's public feed: every startup hiring through Dover
+  # VC portfolio job boards on Getro: collection id → name. Getro's seniority tags narrow the search; titles decide.
+  getro:
+    job_functions: [Software Engineering, Data Science]
+    seniority: [internship, entry_level]
+    locations: [United States]
+    collections: {8672: Accel, 222: General Catalyst, 2105: Thrive, 103: Lux, 1005: 8VC, 246: Insight Partners,
+                  767: Menlo, 189: Redpoint, 120: Lerer Hippeau, 45303: FirstMark, 616: Greycroft, 1124: Primary,
+                  25: Foundry, 184: Upfront, 112: Hyde Park}
+  # VC boards on Consider. Only the newest ~25 jobs per role are readable, so this polls every 20 min.
+  consider:
+    boards: {jobs.a16z.com: a16z}
+    roles: [software-engineer]
+  season_profile: peak                       # peak (Aug–Nov) | normal (×2 intervals) | quiet (×4)
+  intervals_minutes:
+    big_tech: 15
+    tier1: 15
+    tier2: 30
+    tier3: 120
+    slow: 60        # Workday / Amazon / Eightfold — no ETags, real payload every call
+    simplify: 20
+    aggregators: 30 # Getro, Dover, speedyapply
+    consider: 20
+
+alerts:
+  # First time a source is polled, existing jobs are recorded silently; only ones posted within
+  # this many hours are alerted. Stops a 500-message flood on day one.
+  bootstrap_alert_hours: 48
+  max_per_cycle: 40                 # burst guard; the rest wait in the outbox for the next cycle
+  # tier = one channel per company tier (big_tech, tier1, tier2, tier3, other = companies not in companies.yaml);
+  # level = intern / new_grad channels.
+  route_by: tier
+  # Env var holding the Discord webhook per channel. In bot mode the matching DISCORD_CHANNEL_* var holds the
+  # channel id (DISCORD_WEBHOOK_TIER1 → DISCORD_CHANNEL_TIER1). Unset ones fall back to DISCORD_WEBHOOK_URL /
+  # DISCORD_CHANNEL_ID. `python -m jobalerts setup-channels` creates the channels and fills these in.
+  routes:
+    big_tech: DISCORD_WEBHOOK_BIG_TECH
+    tier1: DISCORD_WEBHOOK_TIER1
+    tier2: DISCORD_WEBHOOK_TIER2
+    tier3: DISCORD_WEBHOOK_TIER3
+    other: DISCORD_WEBHOOK_OTHER
+    intern: DISCORD_WEBHOOK_INTERNSHIPS
+    new_grad: DISCORD_WEBHOOK_NEWGRAD
+    ops: DISCORD_WEBHOOK_OPS
+  mention_role_id: null             # Discord role id to @mention on every alert, or null
+  daily_summary_utc_hour: 15        # 15:00 UTC ≈ 08:00 Pacific; null disables
+
+# "📄 Create resume" button (needs DISCORD_BOT_TOKEN + DISCORD_CHANNEL_ID and `python -m jobalerts bot`
+# running on this Mac). Claude Code runs the resume-builder skill headlessly and compiles a PDF.
+resume:
+  output_dir: resumes               # relative to the project, or an absolute path like ~/Resume/generated
+  file_prefix: null                 # PDF is saved as <prefix>_<Company>.pdf; null = First_Last_Resume (profile.yaml)
+  skill: resume-builder
+  model: null                       # null = your Claude Code default; or e.g. opus, sonnet
+  timeout_minutes: 15
+  concurrency: 1                    # resumes / cover letters generated at once; extra clicks wait in a queue
+
+# Local API for the browser extension (extension/), run by the bot on 127.0.0.1 only.
+helper:
+  port: 8765

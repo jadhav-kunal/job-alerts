@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Job Alerts Autofill",
+  "version": "1.0.0",
+  "description": "Fills job application forms from your job-alerts profile, attaches the job's resume and cover letter, and marks the Discord alert as applied. Never submits for you.",
+  "permissions": ["storage", "activeTab", "scripting", "webNavigation"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Job Alerts: show the autofill panel on this page" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.greenhouse.io/*",
+        "*://jobs.lever.co/*",
+        "*://jobs.eu.lever.co/*",
+        "*://jobs.ashbyhq.com/*",
+        "*://*.myworkdayjobs.com/*",
+        "*://*.myworkdaysite.com/*",
+        "*://jobs.smartrecruiters.com/*",
+        "*://apply.workable.com/*",
+        "*://*.icims.com/*",
+        "*://app.dover.com/*",
+        "*://jobs.gem.com/*",
+        "*://*.breezy.hr/*",
+        "*://*.bamboohr.com/*",
+        "*://*.applytojob.com/*",
+        "*://ats.rippling.com/*"
+      ],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}

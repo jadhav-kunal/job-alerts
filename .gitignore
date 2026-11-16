@@ -1,0 +1,22 @@
+# Secrets and personal data: never commit
+.env
+.env.*
+!.env.example
+config/profile.yaml
+data/
+resumes/
+*.pem
+*.key
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Misc
+.DS_Store
+node_modules/
+*.log
+.claude/

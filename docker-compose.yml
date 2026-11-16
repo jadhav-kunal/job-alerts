@@ -1,0 +1,11 @@
+services:
+  jobalerts:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data          # SQLite lives here; back it up with `cp`
+      - ./config:/app/config:ro   # edit preferences.yaml, then `docker compose restart`
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }

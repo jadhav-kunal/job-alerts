@@ -1,0 +1,113 @@
+Company,Tier,Job board,Careers URL
+Meta,Big Tech,Company careers site,
+Microsoft,Big Tech,Company careers site,
+Google,Big Tech,Company careers site,
+Apple,Big Tech,Company careers site,
+Amazon,Big Tech,Amazon,https://www.amazon.jobs
+NVIDIA,Big Tech,Workday,https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite
+ByteDance,Big Tech,Company careers site,
+TikTok,Big Tech,Company careers site,
+Tesla,Big Tech,Company careers site,
+Rippling,Big Tech,Rippling,https://ats.rippling.com/rippling/jobs
+Salesforce,Big Tech,Workday,https://salesforce.wd12.myworkdayjobs.com/External_Career_Site
+Intuit,Big Tech,Company careers site,
+Jane Street,Tier 1,Greenhouse,https://job-boards.greenhouse.io/janestreet
+Hudson River Trading,Tier 1,Greenhouse,https://job-boards.greenhouse.io/hrttalentcommunity
+Optiver,Tier 1,Greenhouse,https://job-boards.greenhouse.io/optiverus
+Anthropic,Tier 1,Greenhouse,https://job-boards.greenhouse.io/anthropic
+OpenAI,Tier 1,Ashby,https://jobs.ashbyhq.com/openai
+xAI,Tier 1,Greenhouse,https://job-boards.greenhouse.io/xai
+Perplexity AI,Tier 1,Ashby,https://jobs.ashbyhq.com/perplexity
+Cognition AI,Tier 1,Ashby,https://jobs.ashbyhq.com/cognition
+Scale AI,Tier 1,Greenhouse,https://job-boards.greenhouse.io/scaleai
+Stripe,Tier 1,Greenhouse,https://job-boards.greenhouse.io/stripe
+Palantir,Tier 1,Lever,https://jobs.lever.co/palantir
+Databricks,Tier 1,Greenhouse,https://job-boards.greenhouse.io/databricks
+Anduril,Tier 1,Greenhouse,https://job-boards.greenhouse.io/andurilindustries
+Waymo,Tier 1,Greenhouse,https://job-boards.greenhouse.io/waymo
+SpaceX,Tier 1,Greenhouse,https://job-boards.greenhouse.io/spacex
+Airbnb,Tier 2,Greenhouse,https://job-boards.greenhouse.io/airbnb
+Figma,Tier 2,Greenhouse,https://job-boards.greenhouse.io/figma
+Discord,Tier 2,Greenhouse,https://job-boards.greenhouse.io/discord
+Roblox,Tier 2,Greenhouse,https://job-boards.greenhouse.io/roblox
+Netflix,Tier 2,Eightfold,https://explore.jobs.netflix.net/careers
+Lyft,Tier 2,Greenhouse,https://job-boards.greenhouse.io/lyft
+Reddit,Tier 2,Greenhouse,https://job-boards.greenhouse.io/reddit
+Pinterest,Tier 2,Greenhouse,https://job-boards.greenhouse.io/pinterest
+Dropbox,Tier 2,Greenhouse,https://job-boards.greenhouse.io/dropbox
+Snowflake,Tier 2,Ashby,https://jobs.ashbyhq.com/snowflake
+Datadog,Tier 2,Greenhouse,https://job-boards.greenhouse.io/datadog
+Cloudflare,Tier 2,Greenhouse,https://job-boards.greenhouse.io/cloudflare
+MongoDB,Tier 2,Greenhouse,https://job-boards.greenhouse.io/mongodb
+Confluent,Tier 2,Ashby,https://jobs.ashbyhq.com/confluent
+Elastic,Tier 2,Greenhouse,https://job-boards.greenhouse.io/elastic
+Sentry,Tier 2,Ashby,https://jobs.ashbyhq.com/sentry
+Vercel,Tier 2,Greenhouse,https://job-boards.greenhouse.io/vercel
+Robinhood,Tier 2,Greenhouse,https://job-boards.greenhouse.io/robinhood
+Brex,Tier 2,Greenhouse,https://job-boards.greenhouse.io/brex
+Ramp,Tier 2,Ashby,https://jobs.ashbyhq.com/ramp
+Chime,Tier 2,Greenhouse,https://job-boards.greenhouse.io/chime
+Affirm,Tier 2,Greenhouse,https://job-boards.greenhouse.io/affirm
+Plaid,Tier 2,Ashby,https://jobs.ashbyhq.com/plaid
+Kraken,Tier 2,Ashby,https://jobs.ashbyhq.com/kraken.com
+Mistral,Tier 2,Ashby,https://jobs.ashbyhq.com/mistral.ai
+Cohere,Tier 2,Ashby,https://jobs.ashbyhq.com/cohere
+ElevenLabs,Tier 2,Ashby,https://jobs.ashbyhq.com/elevenlabs
+Runway ML,Tier 2,Ashby,https://jobs.ashbyhq.com/runway
+Modal Labs,Tier 2,Ashby,https://jobs.ashbyhq.com/modal
+Together AI,Tier 2,Greenhouse,https://job-boards.greenhouse.io/togetherai
+Harvey,Tier 2,Ashby,https://jobs.ashbyhq.com/harvey
+Cursor,Tier 2,Ashby,https://jobs.ashbyhq.com/cursor
+Replit,Tier 2,Ashby,https://jobs.ashbyhq.com/replit
+Wiz,Tier 2,Greenhouse,https://job-boards.greenhouse.io/wizinc
+Snyk,Tier 2,Company careers site,
+1Password,Tier 2,Ashby,https://jobs.ashbyhq.com/1password
+Vanta,Tier 2,Ashby,https://jobs.ashbyhq.com/vanta
+Zoox,Tier 2,Lever,https://jobs.lever.co/zoox
+Shield AI,Tier 2,Lever,https://jobs.lever.co/shieldai
+Cisco,Tier 2,Company careers site,
+IBM,Tier 2,Company careers site,
+PocketFM,Tier 2,Lever,https://jobs.lever.co/pocketfm
+Duolingo,Tier 3,Greenhouse,https://job-boards.greenhouse.io/duolingo
+Instacart,Tier 3,Greenhouse,https://job-boards.greenhouse.io/instacart
+Samsara,Tier 3,Greenhouse,https://job-boards.greenhouse.io/samsara
+Verkada,Tier 3,Greenhouse,https://job-boards.greenhouse.io/verkada
+Okta,Tier 3,Greenhouse,https://job-boards.greenhouse.io/okta
+PagerDuty,Tier 3,Greenhouse,https://job-boards.greenhouse.io/pagerduty
+HubSpot,Tier 3,Company careers site,
+Asana,Tier 3,Greenhouse,https://job-boards.greenhouse.io/asana
+Airtable,Tier 3,Greenhouse,https://job-boards.greenhouse.io/airtable
+Box,Tier 3,Greenhouse,https://job-boards.greenhouse.io/boxinc
+Twilio,Tier 3,Greenhouse,https://job-boards.greenhouse.io/twilio
+GitLab,Tier 3,Greenhouse,https://job-boards.greenhouse.io/gitlab
+Checkr,Tier 3,Greenhouse,https://job-boards.greenhouse.io/checkr
+Gusto,Tier 3,Greenhouse,https://job-boards.greenhouse.io/gusto
+Toast,Tier 3,Greenhouse,https://job-boards.greenhouse.io/toast
+Peloton,Tier 3,Greenhouse,https://job-boards.greenhouse.io/peloton
+Doximity,Tier 3,Greenhouse,https://job-boards.greenhouse.io/doximity
+Lattice,Tier 3,Greenhouse,https://job-boards.greenhouse.io/lattice
+Amplitude,Tier 3,Ashby,https://jobs.ashbyhq.com/amplitude
+Mixpanel,Tier 3,Greenhouse,https://job-boards.greenhouse.io/mixpanel
+SendBird,Tier 3,Greenhouse,https://job-boards.greenhouse.io/sendbird
+Fivetran,Tier 3,Greenhouse,https://job-boards.greenhouse.io/fivetran
+Temporal,Tier 3,Ashby,https://jobs.ashbyhq.com/temporal
+Descript,Tier 3,Greenhouse,https://job-boards.greenhouse.io/descript
+Flatiron Health,Tier 3,Greenhouse,https://job-boards.greenhouse.io/flatironhealth
+LaunchDarkly,Tier 3,Greenhouse,https://job-boards.greenhouse.io/launchdarkly
+Hightouch,Tier 3,Ashby,https://jobs.ashbyhq.com/hightouch
+Mercury,Tier 3,Greenhouse,https://job-boards.greenhouse.io/mercury
+Pendo,Tier 3,Greenhouse,https://job-boards.greenhouse.io/pendo
+Faire,Tier 3,Greenhouse,https://job-boards.greenhouse.io/faire
+Airbyte,Tier 3,Ashby,https://jobs.ashbyhq.com/airbyte
+Notion,Tier 3,Ashby,https://jobs.ashbyhq.com/notion
+Linear,Tier 3,Ashby,https://jobs.ashbyhq.com/Linear
+Benchling,Tier 3,Ashby,https://jobs.ashbyhq.com/benchling
+Hinge Health,Tier 3,Ashby,https://jobs.ashbyhq.com/hinge-health
+Alchemy,Tier 3,Ashby,https://jobs.ashbyhq.com/alchemy
+PostHog,Tier 3,Ashby,https://jobs.ashbyhq.com/posthog
+Deel,Tier 3,Company careers site,
+Watershed,Tier 3,Ashby,https://jobs.ashbyhq.com/watershed
+Supabase,Tier 3,Ashby,https://jobs.ashbyhq.com/supabase
+Bolt,Tier 3,Company careers site,
+Sardine,Tier 3,Ashby,https://jobs.ashbyhq.com/sardine
+SoFi,Tier 3,Greenhouse,https://job-boards.greenhouse.io/sofi

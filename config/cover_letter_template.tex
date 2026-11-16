@@ -1,0 +1,32 @@
+% Cover letter layout (one page, name and contact line on top).
+% Filled in by jobalerts/cover_letter.py (name, contact line, company, date, salutation, body).
+\documentclass[11pt,letterpaper]{article}
+\usepackage[top=0.9in,bottom=0.9in,left=1in,right=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{9pt}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{<<NAME>>}}\\[5pt]
+  <<CONTACT>>
+\end{center}
+
+\vspace{14pt}
+\textbf{<<COMPANY>>} \hfill <<DATE>>
+
+\vspace{6pt}
+Dear <<SALUTATION>>,
+
+<<BODY>>
+
+\vspace{4pt}
+Sincerely,\\[22pt]
+<<NAME>>
+
+\end{document}
