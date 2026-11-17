@@ -45,6 +45,10 @@ AI_ML_RE = re.compile(
     r"|multimodal|speech recognition|recommender|recommendation systems?|neural|pretraining|post training|interpretability|ai agents?)\b"
 )
 RESEARCH_RE = re.compile(r"\b(research|researcher|scientist|phd)\b")
+# PhD-only roles: "Machine Learning PhD Intern", "Research Scientist (Ph.D.)", "Postdoctoral Researcher". A title that
+# also names a master's ("MS/PhD", "Master's or PhD") is open to master's students and is not PhD-only.
+PHD_RE = re.compile(r"\b(phd|ph d|doctoral|doctorate|postdoc\w*|post doc\w*|postdoctoral)\b")
+MASTERS_RE = re.compile(r"\b(ms|msc|m s|mse|meng|masters?|master s|graduate students?)\b")
 DATA_RE = re.compile(r"\b(data scien\w*|data engineer\w*|analytics engineer\w*|data platform|data infrastructure|data analyst|statistic\w*)\b")
 QUANT_RE = re.compile(r"\b(quant\w* (?:developer|dev|research\w*|engineer\w*|software|analyst|strateg\w*)|algorithmic trad\w*|trading (?:systems|engineer\w*|developer|infrastructure))\b")
 SOFTWARE_RE = re.compile(
@@ -92,6 +96,7 @@ class RelevancePrefs:
     accept_unleveled: bool = False                       # mid-level roles with no seniority word
     exclude_title_keywords: list[str] = field(default_factory=list)
     exclude_companies: set[str] = field(default_factory=set)
+    phd_only: str = "route"                              # PhD-only titles: route (own channel) | drop | keep
 
 
 def _category(t: str, hint: str | None) -> str | None:
@@ -195,4 +200,7 @@ def classify(job: NormalizedJob, prefs: RelevancePrefs) -> Decision:
     if loc_class == "unknown" and job.locations:
         flags.append("location could not be confirmed as US")
 
-    return Decision(True, f"{level} · {category}", level=level, category=category, flags=flags)
+    phd_only = bool(PHD_RE.search(t)) and not MASTERS_RE.search(t)
+    if phd_only and prefs.phd_only == "drop":
+        return Decision(False, "PhD only")
+    return Decision(True, f"{level} · {category}", level=level, category=category, flags=flags, phd_only=phd_only)

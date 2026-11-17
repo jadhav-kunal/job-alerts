@@ -44,8 +44,11 @@ class Settings:
     def filters(self) -> dict[str, Any]:
         return self.raw.get("filters", {})
 
-    def route_for(self, tier: str | None, level: str | None) -> str:
-        """Outbox channel for a job alert: its tier (big_tech / tier1 / … / other) or its level (intern / new_grad)."""
+    def route_for(self, tier: str | None, level: str | None, phd_only: bool = False) -> str:
+        """Outbox channel for a job alert: "phd" for PhD-only roles (roles.phd_only: route), else its tier
+        (big_tech / tier1 / … / other) or its level (intern / new_grad)."""
+        if phd_only and self.raw.get("roles", {}).get("phd_only", "route") == "route":
+            return "phd"
         if self.alerts.get("route_by", "tier") == "tier":
             return tier if tier in TIERS else "other"
         return "intern" if level == "intern" else "new_grad"
@@ -110,6 +113,7 @@ def load(prefs_path: Path | None = None, companies_path: Path | None = None) -> 
         accept_unleveled=bool(roles.get("accept_unleveled", False)),
         exclude_title_keywords=roles.get("exclude_title_keywords") or [],
         exclude_companies={c.lower() for c in roles.get("exclude_companies") or []},
+        phd_only=str(roles.get("phd_only", "route")),
     )
 
     src = prefs.get("sources", {})

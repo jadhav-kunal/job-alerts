@@ -35,3 +35,4 @@ class Decision:
     level: str | None = None       # intern / new_grad / entry
     category: str | None = None    # software / ai_ml / research / data / quant
     flags: list[str] = field(default_factory=list)   # soft warnings shown on the alert
+    phd_only: bool = False         # title asks for a PhD and does not also accept a master's

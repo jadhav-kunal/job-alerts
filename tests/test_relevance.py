@@ -87,3 +87,32 @@ def test_locations(loc, ok):
 def test_description_early_career_signal():
     assert run("Software Engineer", description="We want recent graduates with 0-2 years of experience").accept
     assert not run("Software Engineer", description="5+ years of experience").accept
+
+
+@pytest.mark.parametrize("title,phd", [
+    ("Machine Learning PhD Intern", True),
+    ("Software Engineer Intern (Ph.D.)", True),
+    ("PhD Resident, AI", True),
+    ("Research Scientist, New Grad - PhD", True),
+    ("ML Intern - Masters/PhD", False),
+    ("Research Intern (MS or PhD)", False),
+    ("R&D Intern - Master's/PhD", False),
+    ("2027 Summer Intern, MS/PhD, Software Engineer", False),
+    ("Software Engineer, New Grad", False),
+])
+def test_phd_only_titles(title, phd):
+    d = classify(NormalizedJob(source="t:x", source_job_id="1", company="Acme", title=title, url="https://x",
+                               locations=["New York, NY"]), RelevancePrefs())
+    assert d.accept and d.phd_only is phd
+
+
+def test_phd_only_drop_and_route():
+    from jobalerts.config import Settings
+    job = NormalizedJob(source="t:x", source_job_id="1", company="Acme", title="Machine Learning PhD Intern",
+                        url="https://x", locations=["New York, NY"])
+    assert classify(job, RelevancePrefs(phd_only="drop")).reason == "PhD only"
+    s = Settings.__new__(Settings)
+    s.raw = {"roles": {"phd_only": "route"}, "alerts": {"route_by": "tier"}}
+    assert s.route_for("tier1", "intern", True) == "phd" and s.route_for("tier1", "intern", False) == "tier1"
+    s.raw["roles"]["phd_only"] = "keep"
+    assert s.route_for("tier1", "intern", True) == "tier1"

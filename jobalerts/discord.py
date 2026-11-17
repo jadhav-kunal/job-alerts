@@ -28,6 +28,7 @@ TIER_CHANNELS = {
     "tier2": ("tier-2", "Tier 2: strong tech companies and well-funded startups"),
     "tier3": ("tier-3", "Tier 3: other tracked companies"),
     "other": ("other-companies", "Everything else: companies not in companies.yaml, from GitHub lists and VC boards"),
+    "phd": ("phd-roles", "PhD-only roles (PhD interns, PhD new grad, postdocs). MS/PhD roles stay in the tier channels"),
     "ops": ("job-alerts-status", "Daily summary and broken-source warnings"),
 }
 MAX_ATTEMPTS = 5

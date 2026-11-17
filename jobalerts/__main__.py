@@ -122,7 +122,7 @@ async def cmd_run(args) -> None:
 
 async def cmd_test_discord(args) -> None:
     s = config.load()
-    routes = list(discord.TIER_CHANNELS) if s.alerts.get("route_by", "tier") == "tier" else ["intern", "new_grad", "ops"]
+    routes = list(discord.TIER_CHANNELS) if s.alerts.get("route_by", "tier") == "tier" else ["intern", "new_grad", "phd", "ops"]
     targets = {r: s.target_for(r) for r in routes}
     if not any(targets.values()):
         raise SystemExit("No webhook set. Put DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/... in .env")

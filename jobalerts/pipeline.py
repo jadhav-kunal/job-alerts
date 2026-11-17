@@ -225,7 +225,7 @@ class Pipeline:
         ).lastrowid
         self._touch(cid, job)
         if alert:
-            route = self.s.route_for(job.tier, d.level)
+            route = self.s.route_for(job.tier, d.level, d.phd_only)
             self.db.exec("INSERT INTO alerts(canonical_job_id, alert_type, channel, idempotency_key, created_at)"
                          " VALUES (?,?,?,?,?) ON CONFLICT(idempotency_key) DO NOTHING",
                          cid, "new", route, idem_key(cid, "new", "discord", "v1"), t)

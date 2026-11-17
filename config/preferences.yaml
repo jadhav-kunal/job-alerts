@@ -13,6 +13,9 @@ roles:
   accept_unleveled: false
   exclude_title_keywords: []        # e.g. ["sales engineer", "clearance"]
   exclude_companies: []             # company ids or names, lowercase
+  # Titles that ask only for a PhD ("ML PhD Intern", "Postdoctoral Researcher"; not "MS/PhD"):
+  # route = send to their own #phd-roles channel, drop = never alert, keep = treat like any other role.
+  phd_only: route
 
 # Internship seasons. Empty list = any season. New-grad roles rarely have a season and always pass.
 seasons: [Spring 2027, Summer 2027, Fall 2027, Winter 2027]
@@ -83,6 +86,7 @@ alerts:
     other: DISCORD_WEBHOOK_OTHER
     intern: DISCORD_WEBHOOK_INTERNSHIPS
     new_grad: DISCORD_WEBHOOK_NEWGRAD
+    phd: DISCORD_WEBHOOK_PHD
     ops: DISCORD_WEBHOOK_OPS
   mention_role_id: null             # Discord role id to @mention on every alert, or null
   daily_summary_utc_hour: 15        # 15:00 UTC ≈ 08:00 Pacific; null disables
