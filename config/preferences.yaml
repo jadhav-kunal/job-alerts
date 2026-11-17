@@ -42,7 +42,9 @@ eligibility:
 sources:
   # SimplifyJobs GitHub lists (Big Tech + ~700 more companies), plus vanshb03's lists in the same format
   simplify_feeds: [internships, new-grad, vansh-internships, vansh-new-grad]
-  markdown_lists: [speedyapply-internships, speedyapply-new-grad]   # speedyapply/2027-SWE-College-Jobs tables
+  # speedyapply/2027-SWE-College-Jobs and jobright-ai daily lists. Also available: jobright-data-internships,
+  # jobright-data-new-grad (mostly data analyst roles).
+  markdown_lists: [speedyapply-internships, speedyapply-new-grad, jobright-swe-internships, jobright-swe-new-grad]
   dover: true                       # Dover's public feed: every startup hiring through Dover
   # VC portfolio job boards on Getro: collection id → name. Getro's seniority tags narrow the search; titles decide.
   getro:

@@ -151,3 +151,19 @@ def test_too_many_years_only_flags_by_default(tmp_path):
     asyncio.run(pipe.run_source(gh))
     assert db.one("SELECT COUNT(*) FROM alerts")[0] == 1
     assert "asks for 4+ years of experience" in db.one("SELECT flags FROM canonical_jobs")[0]
+
+
+def test_jobright_rows():
+    from jobalerts.connectors.markdown_list import parse_jobright_rows, _posted
+    md = """| Company | Job Title | Location | Work Model | Date Posted |
+| ----- | --------- |  --------- | ---- | ------- |
+| **[Paychex](https://www.paychex.com/)** | **[Software Engineer I](https://jobright.ai/jobs/info/aaa?utm_source=1103)** | St. Petersburg, FL, United States | Hybrid | Nov 16 |
+| ↳ | **[Software Engineer I](https://jobright.ai/jobs/info/bbb?utm_source=1103)** | Cincinnati, OH, United States | Remote | Nov 15 |
+| **[Zoox](https://www.zoox.com/)** | **[Software Intern [Summer 2027]](https://jobright.ai/jobs/info/ccc)** | Foster City, CA, United States | On Site | Nov 16 |
+"""
+    rows = parse_jobright_rows(md)
+    assert [(r["company"], r["title"]) for r in rows] == [
+        ("Paychex", "Software Engineer I"), ("Zoox", "Software Intern [Summer 2027]")]
+    assert rows[0]["location"] == "St. Petersburg, FL, United States; Cincinnati, OH, United States"
+    assert rows[0]["url"] == "https://jobright.ai/jobs/info/aaa?utm_source=1103"
+    assert _posted("Nov 16").month == 11

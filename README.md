@@ -5,11 +5,12 @@ entry-level) to Discord within minutes of them going up. It can also make a tail
 job (with Claude Code), and it comes with a browser extension that fills in application forms for you.
 
 ```
-120 sources ──► dedup (URL → ATS id → fingerprint) ──► title rules ──► description ──► citizenship / clearance
+122 sources ──► dedup (URL → ATS id → fingerprint) ──► title rules ──► description ──► citizenship / clearance
             ──► years + contract rules ──► outbox ──► Discord, one channel per company tier
  98 company ATS boards   (Greenhouse 57, Ashby 32, Lever 4, Workday 2, Amazon, Netflix, Rippling)
   4 GitHub lists, JSON   (SimplifyJobs internships + new grad; vanshb03 internships + new grad)
   2 GitHub lists, tables (speedyapply/2027-SWE-College-Jobs internships + new grad)
+  2 GitHub lists, tables (jobright-ai daily Software Engineer internships + new grad; data-analyst lists optional)
  15 VC portfolio boards  (Getro: Accel, General Catalyst, Thrive, Lux, 8VC, Menlo, Redpoint, …)
   1 a16z portfolio board (Consider) + Dover's public job board (every startup hiring through Dover)
 ```
